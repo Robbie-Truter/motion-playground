@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Ranchers&display=swap");
 @import "tailwindcss";
 
 :root {
@@ -22,6 +23,8 @@ body {
 }
 
 h1 {
-  font-size: 3rem;
+  font-family: "Ranchers", sans-serif;
+  font-style: normal;
+  font-size: 4rem;
   font-weight: 600;
 }
