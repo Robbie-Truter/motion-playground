@@ -1,6 +1,6 @@
 import { motion } from "motion/react";
 import ScrollFade from "./components/ScrollFade";
-import Todo from "./sections/Todo";
+import TodoList from "./sections/TodoList";
 import "./App.css";
 
 const box = {
@@ -46,7 +46,7 @@ const App = () => {
         </section>
 
         <section className="space-y-5 bg-[#FFA4A4] text-black">
-          <Todo />
+          <TodoList />
         </section>
       </main>
     </>
