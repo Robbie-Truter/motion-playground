@@ -12,3 +12,7 @@ Built to test ideas, UI motion patterns, and micro-interactions in a simple setu
 - ⚡ Vite
 
 ---
+
+## 📝 About This Project
+
+This is a practice project to experiment with Framer Motion and create a small animation playground.

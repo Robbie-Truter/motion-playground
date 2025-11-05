@@ -3,7 +3,7 @@ import { motion, Reorder, useDragControls } from "motion/react";
 
 import ScrollFade from "../components/ScrollFade";
 
-const TodoList = () => {
+const ReorderSection = () => {
   const [input, setInput] = useState("");
   const [todos, setTodos] = useState(["Test to-do item"]);
 
@@ -35,14 +35,14 @@ const TodoList = () => {
   return (
     <ScrollFade
       className="space-y-8 w-full"
-      transition={{ delay: 0.3, type: "spring", bounce: 0.7, duration: 1.2 }}
+      transition={{ delay: 0.1, type: "spring", bounce: 0.7, duration: 1.5 }}
     >
-      <h1>To-do list</h1>
+      <h1>Reorder Items</h1>
 
       <form onSubmit={submitTodo} className="flex flex-col gap-5">
         <input
           name="todoInput"
-          placeholder="Brush kitty..."
+          placeholder="Add Item..."
           value={input}
           onChange={handleInputChange}
           className="bg-white rounded-full font-bold p-4 border-3"
@@ -59,14 +59,14 @@ const TodoList = () => {
 
       <Reorder.Group axis="y" values={todos} onReorder={setTodos} className="space-y-4">
         {todos.map((item) => (
-          <Todo key={item} item={item} removeTodo={removeTodo} />
+          <ReorderItem key={item} item={item} removeTodo={removeTodo} />
         ))}
       </Reorder.Group>
     </ScrollFade>
   );
 };
 
-const Todo = ({ item, removeTodo }) => {
+const ReorderItem = ({ item, removeTodo }) => {
   const controls = useDragControls();
   const [isDragging, setIsDragging] = useState(false);
 
@@ -126,4 +126,4 @@ const Todo = ({ item, removeTodo }) => {
   );
 };
 
-export default TodoList;
+export default ReorderSection;
